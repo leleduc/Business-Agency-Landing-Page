@@ -1,0 +1,106 @@
+@import './variable';
+
+.hero {
+  padding-block-start: calc($section-padding + 70px);
+  text-align: center;
+
+  .container {
+    display: grid;
+    gap: 70px;
+
+    .hero-title {
+      color: $white;
+    }
+
+    .hero-text {
+      font-size: $fs-5;
+      color: $white;
+      margin-block: 24px 36px;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-slider,
+    .hero-card {
+      position: relative;
+    }
+
+    .hero-card {
+      .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        color: $charcoal;
+        font-size: 2rem;
+        padding: 25px;
+        border-radius: $radius-circle;
+        transition: $transition-1;
+        animation: pulse 2s ease infinite;
+      }
+      .play-btn:is(:hover, :focus-visible) {
+        color: $violet-blue-crayola;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 $white_a70;
+        }
+        75% {
+          box-shadow: 0 0 0 20px transparent;
+        }
+      }
+    }
+
+    .slider-inner {
+      border-radius: $radius-10;
+      overflow: hidden;
+
+      .slider-container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        transition: $transition-2;
+
+        .slider-item {
+          min-width: 100%;
+          width: 100%;
+          border-radius: $radius-10;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $white_a70;
+      color: $charcoal;
+      font-size: 2rem;
+      padding: 12px;
+      border-radius: $radius-circle;
+      transition: $transition-1;
+    }
+
+    .slider-btn:is(:hover, :focus-visible) {
+      background-color: $white;
+    }
+
+    .slider-btn.prev {
+      left: 20px;
+    }
+
+    .slider-btn.next {
+      right: 20px;
+    }
+  }
+}

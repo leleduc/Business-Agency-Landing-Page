@@ -1,0 +1,48 @@
+@import './variable';
+
+.service {
+  text-align: center;
+  .section-title {
+    margin-block-end: 50px;
+  }
+
+  .service-card {
+    padding: 40px;
+    box-shadow: $shadow-2;
+    border-radius: $radius-6;
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background-color: $violet-blue-crayola;
+      display: grid;
+      place-items: center;
+      color: $white;
+      font-size: 2.5rem;
+      border-radius: $radius-circle;
+      margin-inline: auto;
+
+      ion-icon {
+        --ionicon-stroke-width: 50px;
+      }
+    }
+    .card-title {
+      margin-block: 16px 10px;
+    }
+
+    .btn-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      margin-block-start: 10px;
+      color: $violet-blue-crayola;
+      font-weight: $fw-700;
+      transition: $transition-1;
+    }
+
+    .btn-text:is(:hover, :focus-visible) {
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import './variable';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $ff-manrope;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $white;
+  color: $black-coral;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  height: 300vh;
+}
+body.nav-active {
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
