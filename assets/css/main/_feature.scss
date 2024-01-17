@@ -1,0 +1,34 @@
+@import './variable';
+
+.feature {
+  .container {
+    display: grid;
+    gap: 50px;
+
+    .section-text {
+      margin-block: 25px 30px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 15px;
+
+      .feature-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .card-icon {
+          background-color: $lavender-web;
+          font-size: 1.4rem;
+          padding: 4px;
+          border-radius: $radius-circle;
+
+          ion-icon {
+            --ionicon-stroke-width: 40px;
+          }
+        }
+      }
+    }
+  }
+}

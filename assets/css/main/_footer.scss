@@ -1,0 +1,61 @@
+@import './variable';
+
+.footer {
+  background-color: $charcoal;
+  padding-block: 60px 100px;
+  color: $light-gray;
+
+  .footer-brand .footer-text {
+    margin-block: 20px;
+  }
+
+  .social-list {
+    color: $white;
+  }
+
+  .footer-list-title {
+    color: $white;
+    margin-block-end: 16px;
+  }
+
+  .footer-link {
+    padding-block: 4px;
+    transition: $transition-1;
+  }
+
+  .footer-link:is(:hover, :focus-visible) {
+    color: $violet-blue-crayola;
+  }
+
+  .input-wrapper {
+    position: relative;
+    margin-block-start: 25px;
+  }
+
+  .input-field {
+    background-color: $white_a3;
+    color: $light-gray;
+    font-size: $fs-7;
+    padding: 12px 16px;
+    border: 1px solid $dark-cornflower-blue_a7;
+    border-radius: $radius-6;
+    box-shadow: $shadow-3;
+    outline: none;
+  }
+
+  .input-field::placeholder {
+    color: inherit;
+  }
+
+  .submit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 $radius-6 $radius-6 0;
+    background-color: $violet-blue-crayola;
+    color: $white;
+    padding-inline: 24px;
+    font-weight: $fw-700;
+  }
+}

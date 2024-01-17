@@ -1,0 +1,60 @@
+@import './variable';
+
+.about {
+  .container {
+    display: grid;
+    gap: 50px;
+  }
+
+  .section-title {
+    margin-block-end: 35px;
+  }
+
+  .accordion-card {
+    .card-title {
+      padding-block-end: 20px;
+
+      .accordion-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        ion-icon {
+          font-size: 1.5rem;
+          color: $blue-crayola;
+          transition: $transition-1;
+        }
+
+        .span {
+          transition: $transition-1;
+        }
+      }
+
+      .accordion-btn:is(:hover, :focus-visible) .span {
+        color: $violet-blue-crayola;
+      }
+    }
+
+    .accordion-content {
+      padding-inline-start: 24px;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  .accordion-card.expanded {
+    .accordion-btn {
+      ion-icon {
+        transform: rotate(0.5turn);
+      }
+      .span {
+        color: $violet-blue-crayola;
+      }
+    }
+
+    .accordion-content {
+      max-height: max-content;
+      padding-block-end: 20px;
+    }
+  }
+}

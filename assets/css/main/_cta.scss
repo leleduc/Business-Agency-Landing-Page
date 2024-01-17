@@ -1,0 +1,19 @@
+@import './variable';
+.cta {
+  background-color: $charcoal;
+
+  .container {
+    padding-block: 100px 60px;
+    border-block-end: 1px solid $cadet-blue-crayola_a20;
+
+    .section-title {
+      color: $white;
+      margin-block-end: 30px;
+    }
+    .btn {
+      background-color: $violet-blue-crayola;
+      color: $white;
+      border: none;
+    }
+  }
+}

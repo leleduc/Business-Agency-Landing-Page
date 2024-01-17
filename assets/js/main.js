@@ -58,5 +58,12 @@ jQuery(document).ready(function () {
     );
   });
 
-  jQuery('[data-slider-prev]').click(function () {});
+  /*
+   *    ARCODION
+   *
+   */
+  $('[data-accordion-btn]').click(function () {
+    // $(this).parent().next('.accordion-content').slideToggle();
+    $(this).parents('[data-accordion]').toggleClass('expanded'); // Optional for visual indication
+  });
 });
